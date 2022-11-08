@@ -15,15 +15,15 @@ class SubActivity : AppCompatActivity() {
         //뷰바인딩
         setContentView(binding.root)
 
-        //서브 액티비티 종료 버튼을 누를 떄 자신을 호출했던 메인 액티비티로 값을 돌려주고 액티비티 종료
+        //서브 액티비티 종료 버튼을 누를 때 자신을 호출했던 메인 액티비티로 값을 돌려주고 액티비티 종료
         binding.btnClose.setOnClickListener {
 
             //호출한 메인 액티비티에 돌려줄 인텐트 생성 후 변수 resultIntent 에 저장
-            //인텐트를 돌려줄 떄는 대상을 지정하지 않아도 되므로 Intent()안에 아무것도 담지 않음
+            //인텐트를 돌려줄 때는 대상을 지정하지 않아도 되므로 Intent()안에 아무것도 담지 않음
             val resultIntent = Intent()
 
             //에디트텍스트뷰의 아이디 editMessage에 입력받은 (.text.)텍스트 값을
-            //toString()하여 텍스트(.text.)로 받아와서
+            //toString()하여 텍스트로 받아와서
             //변수 resultIntent에 값 저장(putExtra())
             resultIntent.putExtra("returnValue",binding.editMessage.text.toString())
 
